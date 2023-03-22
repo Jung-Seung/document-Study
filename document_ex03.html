@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunc(){
+        var myDiv=document.getElementById("my-div")
+        //아이디가 my-div인 요소에 접근
+        var txt=myDiv.innerText
+        alert(txt)//hello
+        }
+    </script>
+</head>
+<body>
+    <div id="my-div">
+        hello
+    </div>
+    <button onclick="myFunc()">클릭</button>
+</body>
+</html>

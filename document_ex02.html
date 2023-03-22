@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunc(){
+        var txt=document.querySelectorAll("#my-query>.abc")
+        //querySelector는 요소중 첫번째 찾은것만~
+        //querySelectorAll은 요소 다 접근~
+        console.log(txt[0].innerText)//AAA
+        console.log(txt[1].innerText)//BBB
+        console.log(txt[2].innerText)//CCC    
+        }
+    </script>
+</head>
+<body>
+    <div id="my-query">
+        <span class="abc">AAA</span>
+        <span class="abc">BBB</span>
+        <span class="abc">CCC</span>
+    </div>
+    <button onclick="myFunc()">클릭</button>
+</body>
+</html>

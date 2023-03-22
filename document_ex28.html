@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+          width:300px;
+          /* height:300px; */
+          background-color: aqua;
+        }
+        #my-div{
+          width:100px;
+          height:100px;
+          background-color:red;
+          font-size:30px;
+          font-weight: bold;
+        }
+    </style>
+    <script>
+       var num=1
+       function createDiv(){
+          var myDiv=document.createElement('div')
+          //div태그 생성하고 myDiv에 할당
+          myDiv.setAttribute('id','my-div')
+          myDiv.setAttribute('class','my-class')
+          //생성된 div에 id설정!
+          myDiv.innerText=num+'번째'
+          num++
+          var myWrap=document.getElementById('wrap')
+          //wrap접근
+          myWrap.appendChild(myDiv)
+          //wrap의 자식으로 아까 동적생성한 div를 추가해라
+       }
+       function deleteLastDiv(){
+        var myWrap=document.getElementById('wrap')
+        myWrap.removeChild(myWrap.lastChild)
+        //myWrap의 마지막 자식을 제거하라
+       }
+       function deleteCertainDiv(){
+        var myWrap=document.getElementById('wrap')
+
+        var myClass=document.getElementsByClassName("my-class")
+        //0,1,2 
+        myWrap.removeChild(myClass[1])//wrap의 자식제거
+        //0,1,2 -> 0,1 -> 0
+       }
+       function deleteChoiceCertainDiv(){
+        var myWrap=document.getElementById('wrap')
+        var myInput=document.getElementById('my-input')
+        var index=myInput.value
+        index=parseInt(index)
+        var myClass=document.getElementsByClassName("my-class")
+        myWrap.removeChild(myClass[index])//wrap의 자식제거
+       }
+    </script>
+</head>
+<body>
+  <div id="wrap">
+
+  </div>
+  <button onclick="createDiv()">생성</button>
+  <button onclick="deleteLastDiv()">마지막제거</button>
+  <button onclick="deleteCertainDiv()">특정제거</button>
+  <hr>
+  <input type="text" id="my-input"/>
+  <button onclick="deleteChoiceCertainDiv()">선택특정제거</button>
+</body>
+</html>

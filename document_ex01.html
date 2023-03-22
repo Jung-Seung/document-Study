@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunc(){
+        var txt=document.querySelector("#my-query>.abc").innerText
+        //document객체 내장메서드 querySelector로
+        //아이디 my-query인 요소의 하위 요소중에 abc클래스인 요소한개만
+        //그 중에 첫번째발견한것
+        //그것의 태그안의 글자 읽어온다.
+        alert(txt)
+        }
+    </script>
+</head>
+<body>
+    <div id="my-query">
+        <span class="abc">AAA</span>
+        <span class="abc">BBB</span>
+        <span class="abc">CCC</span>
+    </div>
+    <button onclick="myFunc()">클릭</button>
+</body>
+</html>

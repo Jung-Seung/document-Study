@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunc(){
+        var myRadio=document.getElementsByClassName("my-radio")
+        //getElementsByClassName-클래스이름으로 여러개의 원소를 가져온다.
+        alert(myRadio[0].checked)
+        alert(myRadio[1].checked)
+        alert(myRadio[2].checked)
+        //체크된 라디오버튼은 true, 체크안되면 false고
+        }
+    </script>
+</head>
+<body>
+    <input type="radio" name="radio-grp1" class="my-radio"/>
+    <input type="radio" name="radio-grp1" class="my-radio"/>
+    <input type="radio" name="radio-grp1" class="my-radio"/>
+    <button onclick="myFunc()">클릭</button>
+</body>
+</html>

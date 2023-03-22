@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+       function myFunc(){
+        //G마켓 로그인 패스워드 입력창 
+        //암호화 해제->복원 반복
+        //getElementById, if문~
+        //getAttribute,setAttribute 사용
+        //접근해서 type속성값을 검사한 후~ 변경~
+        //20분에 같이 봅시다
+        var myPw=document.getElementById("my-pw")
+        myPw.setAttribute('type','text')
+       }
+    </script>
+</head>
+<body>
+  <input type="text" id="my-id"/>
+  <input type="password" id="my-pw"/>
+  <button onclick="myFunc()">클릭</button>
+</body>
+</html>

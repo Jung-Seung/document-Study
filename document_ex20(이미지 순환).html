@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      img{
+        width:100px;
+        height:100px;
+      }
+    </style>
+    <script>
+      var imgList=["./images/dog.jpg","./images/cat.jpg","./images/sudal.jpg"]
+      var i=0
+      function myFunc(){
+        var myImg=document.getElementById("my-img")
+        i++
+        if(i>=imgList.length){
+          i=0
+        }
+        myImg.setAttribute('src',imgList[i])
+        var src=myImg.getAttribute('src')
+        console.log(src)
+       }
+    </script>
+</head>
+<body>
+  <img src="./images/dog.jpg" id="my-img"/>
+  <button onclick="myFunc()">클릭</button>
+</body>
+</html>

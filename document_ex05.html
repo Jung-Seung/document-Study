@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunc(){
+        var myInput=document.getElementById("my-input")
+        //아이디가 my-input인 요소에 접근~
+        alert(myInput.value)//김대리
+        //div에 접근하면 innerText로 글자 가져오고
+        //input에 접근하면 value로 값 가져오고
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value="김대리" id="my-input"/>
+    <button onclick="myFunc()">클릭</button>
+</body>
+</html>

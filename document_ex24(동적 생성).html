@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+          width:300px;
+          /* height:300px; */
+          background-color: aqua;
+        }
+        #my-div{
+          width:100px;
+          height:100px;
+          background-color:red;
+        }
+    </style>
+    <script>
+       function myFunc(){
+          var myDiv=document.createElement('div')
+          //div태그 생성하고 myDiv에 할당
+          myDiv.setAttribute('id','my-div')
+          //생성된 div에 id설정!
+          var myWrap=document.getElementById('wrap')
+          //wrap접근
+          myWrap.appendChild(myDiv)
+          //wrap의 자식으로 아까 동적생성한 div를 추가해라
+       }
+    </script>
+</head>
+<body>
+  <div id="wrap">
+
+  </div>
+  <button onclick="myFunc()">클릭</button>
+</body>
+</html>

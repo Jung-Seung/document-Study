@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function myFunc(){
+       var myCheck=document.getElementsByClassName("my-check")
+        for(var i=0; i<myCheck.length; i++){
+            if(myCheck[i].checked===true){
+                alert(myCheck[i].value)
+            }
+        }
+       }
+    </script>
+</head>
+<body>
+    <h1>선호하는 여행지 선택</h1>
+    <label>일본</label>
+    <input type="checkbox" class="my-check" value="japan">
+    <label>중국</label>
+    <input type="checkbox" class="my-check" value="china">
+    <label>대만</label>
+    <input type="checkbox" class="my-check" value="thailand">
+    <button onclick="myFunc()">클릭</button>
+</body>
+</html>

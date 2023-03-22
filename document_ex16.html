@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my-div{
+            width:100px;
+            height:100px;
+            text-align: center;
+            padding-top: 30px;
+            border-radius: 100%;
+            box-sizing: border-box;
+            background-color: aqua;
+        }
+    </style>
+    <script src="./js/moment.js"></script>
+    <script>
+        function myFunc(){
+        var myDiv=document.getElementById("my-div")
+        var time=moment().format('YYYY년MM월DD일 hh시mm분ss초');
+        myDiv.innerText=time
+        }
+        function start(){
+            setInterval(myFunc,1000)
+        }
+    </script>
+</head>
+<body>
+    <div id="my-div">
+    </div>
+    <button onclick="start()">클릭</button>
+</body>
+</html>
